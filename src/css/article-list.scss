@@ -1,0 +1,191 @@
+@import "common";
+.article-list{
+  .article-item {
+    width: 100%;
+    height: 200px;
+    //background: #1a3c4d;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: all .3s;
+    &:hover{
+      transform: translateY(-10px);
+    }
+    .thumbnail{
+      width: 200px;
+      height: 100%;
+      clip-path: polygon(0 0,94% 0,100% 100%,0 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        //position: absolute;
+        //display: block;
+        //right:-85%;
+        //margin-right: -50%;
+        //width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .article-text{
+      width: $main-width - $left-aside-width - $right-aside-width -200px - 40px;
+      height: 100%;
+      padding: 30px 30px 15px;
+
+      //background: #6c5328;
+      .title-box{
+        width: 100%;
+        font-size: 22px;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .top{
+          background: #f05050;
+          color: #fff;
+          padding: 4px 10px;
+          font-size: 13px;
+          border-radius: 4px;
+          overflow: hidden;
+          margin-right: 10px;
+          flex-shrink: 0;
+          margin-bottom: 6px;
+        }
+        .title{
+          color: #fff;
+          text-shadow: 0.1875rem 0.1875rem 0.3125rem #333;
+          letter-spacing: .09rem;
+          padding-bottom: 6px;
+          font-weight: 200;
+        }
+      }
+      .article-desc{
+        text-shadow: 0.1875rem 0.1875rem 0.3125rem #333;
+        letter-spacing: .09rem;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 2em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .line{
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        margin: 15px 0;
+      }
+      .article-infos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 13px;
+        color: #fff;
+        .item{
+          color: #fff !important;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          svg{
+            //color: #fff;
+            width: 13px;
+            stroke: #fff;
+          }
+          span{
+            color: #fff;
+            margin-left: 8px;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+    .background{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      //transform: scale(1.4);
+      -o-object-fit: cover;
+      object-fit: cover;
+      //-webkit-filter: blur(1.5rem) brightness(.83);
+      //filter: blur(1.5rem) brightness(1);
+      filter: blur(10px) brightness(.83);
+      background-repeat: no-repeat;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.page-navigator-wrapper{
+  padding: 30px 0;
+  width: 100%;
+
+  .page-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    a{
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 12px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: #000;
+      justify-content: center;
+      transition: all .3s;
+      svg{
+        margin: 0 auto;
+      }
+      &:hover{
+        background: #000;
+        color: #fff;
+      }
+      &:first-child{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      &:last-child{
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+    .active{
+      background: #000;
+      color: #fff;
+
+    }
+  }
+}

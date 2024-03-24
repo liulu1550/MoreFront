@@ -1,0 +1,174 @@
+@import "common";
+
+.layout {
+  .app-container {
+    .main-container {
+      .main {
+        .page-main {
+          .container {
+            .main-content {
+              width: 100%;
+
+              .month-group {
+                width: 100%;
+                //background: #a2a2a2;
+                display: flex;
+                flex-direction: column;
+
+                .month-title {
+                  width: 100%;
+
+                  .title {
+                    width: 168px;
+                    //overflow: hidden;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                    .text {
+                      display: inline;
+                      padding: 8px 15px;
+                      background: #fff;
+                      font-size: 12px;
+                      color: #fff;
+                      border-radius: 20px;
+                      box-sizing: border-box;
+
+                    }
+                  }
+                }
+
+                .article-item-box {
+                  width: 100%;
+                  padding: 0 20px 0 84px;
+                  //background: #6c5328;
+                  position: relative;
+
+                  .article {
+                    width: 100%;
+                    text-decoration: none;
+                    border-left: 4px solid #fff;
+                    display: flex;
+                    padding: 20px 0;
+                    position: relative;
+
+                    .dot {
+                      position: absolute;
+                      left: -10px;
+                      top: 50%;
+                      margin-top: -8px;
+                      //display: block;
+                      width: 16px;
+                      height: 16px;
+                      border-radius: 16px;
+                      background: #eee;
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+
+                      .mini {
+                        width: 6px;
+                        height: 6px;
+                        background: #fff;
+                        border-radius: 6px;
+                      }
+                    }
+
+                    .article-title {
+                      padding: 10px 15px;
+                      background: #fff;
+                      color: #fff;
+                      font-size: 14px;
+                      margin-left: 20px;
+                      border-radius: 6px;
+                      transition: all .3s;
+                      box-shadow: $box-shadow;
+                      border: 1px solid #dee5e7;
+                      position: relative;
+
+                      &:hover {
+                        transform: translateY(-3px);
+                      }
+
+                      &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        left: -4px;
+                        top: 50%;
+                        margin-top: -5px;
+                        width: 10px;
+                        height: 10px;
+                        background: #6c5328;
+                        transform: rotate(45deg);
+                        //border-top: 4px solid transparent; 	/* 箭头高低 */
+                        //border-bottom: 4px solid transparent; /* 箭头高低 */
+                        //border-right: 8px solid #f70025; /* 箭头长度*/
+                      }
+                    }
+                  }
+
+                  .article-date {
+                    font-size: 14px;
+                    position: absolute;
+                    left: 36px;
+                    top: 50%;
+                    margin-top: -7px;
+                  }
+                }
+
+                @each $c in $bgcolorlist {
+                  $i: index($bgcolorlist, $c);
+                  &:nth-child(8n + #{$i}) { //+1是除了第一个以外的li
+                    .month-title {
+                      .title {
+                        .text {
+                          background: nth($bgcolorlist, $i);
+                        }
+                      }
+                    }
+
+                    .article-item-box {
+                      .article {
+                        border-left-color: nth($bgcolorlist, $i);
+
+                        .dot {
+                          .mini {
+                            background: nth($bgcolorlist, $i);
+                          }
+                        }
+
+                        .article-title {
+                          background: nth($bgcolorlist, $i);
+
+                          &::before {
+                            background: nth($bgcolorlist, $i);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          //.item{
+          //  @each $c in $bgcolorlist{
+          //    $i:index($bgcolorlist,$c);
+          //    &:nth-child(8n + #{$i}){//+1是除了第一个以外的li
+          //      background: nth($bgcolorlist,$i);
+          //    }
+          //  }
+          //  width: 100px;
+          //  height: 100px;
+          //}
+
+
+        }
+      }
+    }
+  }
+}

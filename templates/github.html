@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//wouldmissyou.com"/>
+    <title>首页-多点部落</title>
+    <link rel="icon" type="image/ico" href="">
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" href="../dist/css/github.min.css">
+    <script src="../dist/js/feather.min.js"></script>
+</head>
+<body>
+<header id="Header">
+    <div class="header">
+        <a href="/templates/home.html" class="logo-wrapper">
+            <img src="https://ossimg.wouldmissyou.com/site/static/image3.png" alt="">
+        </a>
+        <div class="header-aside-wrapper">
+            <div class="header-left">
+                <div class="pei-item">
+                    <i data-feather="pie-chart"></i>
+                    <span class="caret"></span>
+                </div>
+                <div class="search-item">
+                    <input class="search-input" type="search" required placeholder="搜索（⌘ + K）">
+                    <div class="search-btn" >
+                        <i data-feather="search"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="weather-item item">
+                    <div id="tp-weather-widget"></div>
+                </div>
+                <div class="shuoshuo-item">
+                    <i data-feather="twitch"></i>
+                </div>
+                <div class="login-item" id="AuthBtn">
+                    <i data-feather="key"></i>
+                    <span class="caret"></span>
+                </div>
+                <div class="user-item item">
+                    <i data-feather="user"></i>
+                    <span class="username">多点部落</span>
+                    <span class="caret"></span>
+                    <div class="user-info-drop" style="display: none">
+                        <a href="/templates/userprofile.html" class="item">
+                            <i data-feather="user"></i>
+                            <span>个人中心</span>
+                        </a>
+                        <a href="" class="item">
+                            <i data-feather="log-out"></i>
+                            <span>退出登录</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+<div class="layout">
+    <div class="app-container">
+        <div class="left-aside">
+            <div class="nav-aside">
+                <div class="site-info-wrapper">
+                    <div class="site-avatar">
+                        <img src="http://ossimg.wouldmissyou.com/site/static/avatar.jpg" alt="">
+                    </div>
+                    <div class="site-name">多点部落 <span class="caret"></span></div>
+                    <div class="site-description">学无止尽苦与乐</div>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="nav-group-wrapper">
+                        <div class="group-title">导航</div>
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="/templates/home.html">
+                                    <span class="nav-name">
+                                        <i data-feather="home"></i>
+                                        <span class="name">首页</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a href="/templates/archives.html">
+                                    <span class="nav-name">
+                                        <i data-feather="archive"></i>
+                                        <span class="name">归档</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/templates/github.html">
+                                    <span class="nav-name">
+                                        <i data-feather="github"></i>
+                                        <span class="name">仓库</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void (0)" class="drop-item">
+                                    <span class="nav-name">
+                                        <i data-feather="grid"></i>
+                                        <span class="name">分类</span>
+                                    </span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                                <div class="drop-list" hidden="hidden">
+                                    <a href="/templates/categories.html" class="active">
+                                        <span class="nav-name">
+                                        <span class="name">Python</span>
+                                        </span>
+                                    </a>
+                                    <a href="/templates/categories.html" class="">
+                                        <span class="nav-name">
+                                        <span class="name">Javascript</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/templates/links.html">
+                                    <span class="nav-name">
+                                        <i data-feather="link"></i>
+                                        <span class="name">链接</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/templates/resources.html">
+                                    <span class="nav-name">
+                                        <i data-feather="inbox"></i>
+                                        <span class="name">资源</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void (0)" class="drop-item">
+                                    <span class="nav-name">
+                                        <i data-feather="tool"></i>
+                                        <span class="name">工具</span>
+                                    </span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                                <div class="drop-list" hidden="hidden">
+                                    <a href="/templates/tools.html">
+                                        <span class="nav-name">
+                                            <i data-feather="link-2"></i>
+                                        <span class="name">视频解析</span>
+                                        </span>
+                                    </a>
+                                    <a href="/templates/tools.html" class="">
+                                        <span class="nav-name">
+                                            <i data-feather="grid"></i>
+                                        <span class="name">Javascript</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void (0)" class="drop-item">
+                                    <span class="nav-name">
+                                        <i data-feather="info"></i>
+                                        <span class="name">关于</span>
+                                    </span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                                <div class="drop-list" hidden="hidden">
+                                    <a href="/templates/about.html">
+                                        <span class="nav-name">
+                                            <i data-feather="coffee"></i>
+                                        <span class="name">关于本站</span>
+                                        </span>
+                                    </a>
+                                    <a href="/templates/privacy.html" class="">
+                                        <span class="nav-name">
+                                            <i data-feather="twitch"></i>
+                                        <span class="name">隐私政策</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-footer">
+                <div class="item hint--top" id="reward" data-hint="请随意赞赏，谢谢~">
+                    <i data-feather="gift"></i>
+                    <span>打赏</span>
+                </div>
+                <a href="/templates/leaves.html" class="item">
+                    <i data-feather="send"></i>
+                    <span>留言</span>
+                </a>
+                <div class="item">
+                    <i data-feather="rss"></i>
+                    <span>订阅</span>
+                </div>
+            </div>
+        </div>
+        <div class="container-right-aside">
+            <div class="main-container">
+                <div class="main">
+                    <div class="page-title">
+                        <div class="title line1"><i data-feather="github"></i>GitHub</div>
+                    </div>
+                    <div class="page-main">
+                        <div class="container">
+                            <div class="main-content">
+                                <div class="top-img">
+                                    <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/28/iFWItj1679992585506.jpg" alt="">
+                                </div>
+                                <div class="github-list">
+                                    <div class="loading">
+                                        <i class="iconfont icon-Loading"></i>
+                                        <span>加载中...</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="message-container">
+                                <div class="text1">
+                                    <span>发表留言</span>
+                                    <span class="info hint--top"  data-hint="登录后方可发表信息哦~请勿发表违规内容、无意义内容。">
+                                        <i data-feather="info" width="18"></i>
+                                    </span>
+                                </div>
+                                <div class="message-box">
+                                    <textarea name="message" id="messageBox" placeholder="说点什么吧~" ></textarea>
+                                    <div class="button-group">
+                                        <div class="other">
+                                            <span class="hint--bottom" data-hint="表情">
+                                                <i data-feather="smile" width="20"></i>
+                                            </span>
+                                        </div>
+                                        <div class="submit">
+                                            <span>登录后提交</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-list">
+                                        <div class="text1">51条评论</div>
+                                        <div class="message-item">
+                                            <div class="avatar">
+                                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/29/vel1K61680057332873.jpg" alt="">
+                                            </div>
+                                            <div class="message-content">
+                                                <div class="name">多点部落MoreCoding</div>
+                                                <div class="date">January 24th, 2023 at 08:54 pm</div>
+                                                <div class="content">
+                                                    <p>博客名称：薯条吖</p>
+                                                    <p>博客地址：https://www.shutiaoya.com</p>
+                                                    <p>博客Logo：https://www.shutiaoya.com/logo</p>
+                                                    <div class="replay" hidden="hidden">
+                                                        <input type="text" class="replay-input">
+                                                        <span class="btn">回复</span>
+                                                    </div>
+
+                                                    <div class="message-item">
+                                                        <div class="avatar">
+                                                            <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/29/vel1K61680057332873.jpg" alt="">
+                                                        </div>
+                                                        <div class="message-content">
+                                                            <div class="name">多点部落MoreCoding</div>
+                                                            <div class="date">January 24th, 2023 at 08:54 pm</div>
+                                                            <div class="content">
+                                                                <p>博客名称：薯条吖</p>
+                                                                <p>博客地址：https://www.shutiaoya.com</p>
+                                                                <p>博客Logo：https://www.shutiaoya.com/logo</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message-item">
+                                            <div class="avatar">
+                                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/29/vel1K61680057332873.jpg" alt="">
+                                            </div>
+                                            <div class="message-content">
+                                                <div class="name">多点部落MoreCoding</div>
+                                                <div class="date">January 24th, 2023 at 08:54 pm</div>
+                                                <div class="content">
+                                                    <p>博客名称：薯条吖</p>
+                                                    <p>博客地址：https://www.shutiaoya.com</p>
+                                                    <p>博客Logo：https://www.shutiaoya.com/logo</p>
+                                                    <div class="replay" hidden="hidden">
+                                                        <input type="text" class="replay-input">
+                                                        <span class="btn">回复</span>
+                                                    </div>
+
+                                                    <div class="message-item">
+                                                        <div class="avatar">
+                                                            <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/29/vel1K61680057332873.jpg" alt="">
+                                                        </div>
+                                                        <div class="message-content">
+                                                            <div class="name">多点部落MoreCoding</div>
+                                                            <div class="date">January 24th, 2023 at 08:54 pm</div>
+                                                            <div class="content">
+                                                                <p>博客名称：薯条吖</p>
+                                                                <p>博客地址：https://www.shutiaoya.com</p>
+                                                                <p>博客Logo：https://www.shutiaoya.com/logo</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-aside">
+                <div class="right-tabs-container">
+                    <div class="tab-header">
+                        <div class="item">
+                            <i data-feather="thumbs-up" width="16"></i>
+                        </div>
+                        <div class="item">
+                            <i data-feather="message-square" width="16"></i>
+                        </div>
+                        <div class="item">
+                            <i data-feather="gift" width="16"></i>
+                        </div>
+                    </div>
+                    <div class="bottom-line"><span class="line"></span></div>
+                    <div class="tab-content-list">
+                        <div class="tab-content-item">
+                            <div class="tab-title">热门文章</div>
+                            <div class="item-list">
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line1"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num">
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-content-item" hidden="hidden">
+                            <div class="tab-title">最新评论</div>
+                            <div class="item-list">
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line1"> 左耳 </div>
+                                        <div class=" title desc line2"> 感谢博主分享，博主辛苦了 </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-content-item" hidden="hidden">
+                            <div class="tab-title">随机文章</div>
+                            <div class="item-list">
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line1"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num">
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-site-info-container">
+                    <div class="site-info-title">站点信息</div>
+                    <div class="info-box">
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="award"></i>
+                                <span>文章数目</span>
+                            </div>
+                            <span class="num-text">109</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="message-circle"></i>
+                                <span>评论数目</span>
+                            </div>
+                            <span class="num-text">109</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="calendar"></i>
+                                <span>运行天数</span>
+                            </div>
+                            <span class="num-text">5年23天</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="activity"></i>
+                                <span>最后活动</span>
+                            </div>
+                            <span class="num-text">5天前</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="user"></i>
+                                <span>访客总数</span>
+                            </div>
+                            <span class="num-text">4452277</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-tags-container">
+                    <div class="site-tag-title">标签云</div>
+                    <div class="tag-list">
+                        <a href="">python</a>
+                        <a href="">django</a>
+                        <a href="">javascript</a>
+                        <a href="">node</a>
+                        <a href="">vue</a>
+                        <a href="">网络安全</a>
+                        <a href="">操作系统</a>
+                        <a href="">macos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-footer">
+            <div class="left">
+                <span>© 2023 All rights reserved.</span>
+                <a href="https://beian.miit.gov.cn/#/Integrated/index">CopyRight©皖ICP备18020895号-1</a>
+            </div>
+            <div class="right">
+                <span>PowerBy Django+Django REST framework</span><span>|</span>
+                <span>AuthorBy 多点部落</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="auth-container" style="display: none">
+    <div class="auth-box">
+        <div class="image-box">
+            <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/login-image1679879542997.svg" alt="">
+        </div>
+        <div class="login-wrapper-box">
+            <div class="box-title"><img src="https://ossimg.wouldmissyou.com/site/static/image1.png" alt=""></div>
+            <form action="" method="post">
+                <div class="login-box">
+                    <div class="box-name">手机号码:</div>
+                    <div class="box-input"><input type="text" name="mobile" placeholder="请输入手机号码"></div>
+                    <div class="box-name">验证码:</div>
+                    <div class="box-input captcha-box">
+                        <input type="text" name="code" placeholder="请输入验证码">
+                        <span class="" id="getCaptchaBtn">获取验证码</span>
+                    </div>
+                    <div class="box-input">
+                        <button type="submit" class="submit-login">注册并登录</button>
+                    </div>
+                    <div class="no-author">
+                        <div class="title">其他登录方式</div>
+                        <div class="other-login-type">
+                            <a href="">
+                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/gitee1679882630843.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/github-mark1679882649472.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/QQ1679882692656.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/微博1679882740673.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="reward-container" style="display: none">
+    <div class="reward-main">
+        <div class="reward-header">
+            <span class="active">支付宝</span>
+            <span>微信</span>
+        </div>
+        <div class="img-box">
+            <div class="pay-box">
+                <img src="https://ossimg.wouldmissyou.com/site/static/alipay.png" alt="">
+            </div>
+            <div class="pay-box" hidden="hidden">
+                <img src="https://ossimg.wouldmissyou.com/site/static/wechat.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    feather.replace({"width": "14px"})
+</script>
+<script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "auto",
+        unit: "c",
+        theme: "dark",
+        token: "3cddaf80-91e9-4203-9ae9-c7104826e370",
+        hover: "enabled",
+        container: "tp-weather-widget"
+    })
+</script>
+<script src="../dist/js/jquery.min.js"></script>
+<script src="../dist/js/message.min.js"></script>
+<script src="../dist/js/requests.min.js"></script>
+<script src="../dist/js/main.min.js"></script>
+<script src="../dist/js/github.min.js"></script>
+</body>
+</html>

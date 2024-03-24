@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//wouldmissyou.com"/>
+    <title>首页-多点部落</title>
+    <link rel="icon" type="image/ico" href="">
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" href="../dist/css/article-detail.min.css">
+    <link rel="stylesheet" href="../dist/css/markdown.min.css">
+    <link rel="stylesheet" href="../dist/css/monokai-sublime.min.css">
+    <script src="../dist/js/feather.min.js"></script>
+</head>
+<body>
+<header id="Header">
+    <div class="header">
+        <a href="/templates/home.html" class="logo-wrapper">
+            <img src="https://ossimg.wouldmissyou.com/site/static/image3.png" alt="">
+        </a>
+        <div class="header-aside-wrapper">
+            <div class="header-left">
+                <div class="pei-item">
+                    <i data-feather="pie-chart"></i>
+                    <span class="caret"></span>
+                </div>
+                <div class="search-item">
+                    <input class="search-input" type="search" required placeholder="搜索（⌘ + K）">
+                    <div class="search-btn" >
+                        <i data-feather="search"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="weather-item item">
+                    <div id="tp-weather-widget"></div>
+                </div>
+                <div class="shuoshuo-item">
+                    <i data-feather="twitch"></i>
+                </div>
+                <div class="login-item" id="AuthBtn">
+                    <i data-feather="key"></i>
+                    <span class="caret"></span>
+                </div>
+                <div class="user-item item">
+                    <i data-feather="user"></i>
+                    <span class="username">多点部落</span>
+                    <span class="caret"></span>
+                    <div class="user-info-drop" style="display: none">
+                        <a href="/templates/userprofile.html" class="item">
+                            <i data-feather="user"></i>
+                            <span>个人中心</span>
+                        </a>
+                        <a href="" class="item">
+                            <i data-feather="log-out"></i>
+                            <span>退出登录</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+<div class="layout">
+    <div class="app-container">
+        <div class="left-aside">
+            <div class="nav-aside">
+                <div class="site-info-wrapper">
+                    <div class="site-avatar">
+                        <img src="http://ossimg.wouldmissyou.com/site/static/avatar.jpg" alt="">
+                    </div>
+                    <div class="site-name">多点部落 <span class="caret"></span></div>
+                    <div class="site-description">学无止尽苦与乐</div>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="nav-group-wrapper">
+                        <div class="group-title">导航</div>
+                        <ul class="nav-list">
+                            <li class="nav-item active">
+                                <a href="/templates/home.html">
+                                    <span class="nav-name">
+                                        <i data-feather="home"></i>
+                                        <span class="name">首页</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/templates/archives.html">
+                                    <span class="nav-name">
+                                        <i data-feather="archive"></i>
+                                        <span class="name">归档</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/templates/github.html">
+                                    <span class="nav-name">
+                                        <i data-feather="github"></i>
+                                        <span class="name">仓库</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void (0)" class="drop-item">
+                                    <span class="nav-name">
+                                        <i data-feather="grid"></i>
+                                        <span class="name">分类</span>
+                                    </span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                                <div class="drop-list" hidden="hidden">
+                                    <a href="/templates/categories.html" class="active">
+                                        <span class="nav-name">
+                                        <span class="name">Python</span>
+                                        </span>
+                                    </a>
+                                    <a href="/templates/categories.html" class="">
+                                        <span class="nav-name">
+                                        <span class="name">Javascript</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/templates/links.html">
+                                    <span class="nav-name">
+                                        <i data-feather="link"></i>
+                                        <span class="name">链接</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/templates/resources.html">
+                                    <span class="nav-name">
+                                        <i data-feather="inbox"></i>
+                                        <span class="name">资源</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void (0)" class="drop-item">
+                                    <span class="nav-name">
+                                        <i data-feather="tool"></i>
+                                        <span class="name">工具</span>
+                                    </span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                                <div class="drop-list" hidden="hidden">
+                                    <a href="/templates/tools.html">
+                                        <span class="nav-name">
+                                            <i data-feather="link-2"></i>
+                                        <span class="name">视频解析</span>
+                                        </span>
+                                    </a>
+                                    <a href="/templates/tools.html" class="">
+                                        <span class="nav-name">
+                                            <i data-feather="grid"></i>
+                                        <span class="name">Javascript</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void (0)" class="drop-item">
+                                    <span class="nav-name">
+                                        <i data-feather="info"></i>
+                                        <span class="name">关于</span>
+                                    </span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                                <div class="drop-list" hidden="hidden">
+                                    <a href="/templates/about.html">
+                                        <span class="nav-name">
+                                            <i data-feather="coffee"></i>
+                                        <span class="name">关于本站</span>
+                                        </span>
+                                    </a>
+                                    <a href="/templates/privacy.html" class="">
+                                        <span class="nav-name">
+                                            <i data-feather="twitch"></i>
+                                        <span class="name">隐私政策</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-footer">
+                    <div class="item hint--top" id="reward" data-hint="请随意赞赏，谢谢~">
+                        <i data-feather="gift"></i>
+                        <span>打赏</span>
+                    </div>
+                <a href="/templates/leaves.html" class="item">
+                    <i data-feather="send"></i>
+                    <span>留言</span>
+                </a>
+                <div class="item">
+                    <i data-feather="rss"></i>
+                    <span>订阅</span>
+                </div>
+            </div>
+        </div>
+        <div class="container-right-aside">
+            <div class="main-container">
+                <div class="main">
+                    <div class="page-title">
+                        <div class="title line1">多点部落MoreCoding多部落MoreCodi点部落MoreCoding多点部落MoreCoding多点部落MoreCoding多点部落MoreCoding多点部落MoreCoding</div>
+                        <div class="desc line1">
+                            <span>
+                                <i data-feather="user"></i>
+                                <span>多点部落</span>
+                            </span>
+                            <span>
+                                <i data-feather="clock"></i>
+                                <span>2016 年 12 月 05 日</span>
+                            </span>
+                            <span>
+                                <i data-feather="eye"></i>
+                                <span>5268907 次浏览</span>
+                            </span>
+                            <span>
+                                <i data-feather="message-circle"></i>
+                                <span>2611 条评论</span>
+                            </span>
+                            <span>
+                                <i data-feather="pen-tool"></i>
+                                <span>21105 字数</span>
+                            </span>
+                            <span>
+                                <i data-feather="hash"></i>
+                                <span>Python</span>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="page-main">
+                        <div class="container">
+                            <div class="page-nav">
+                                <i data-feather="home"></i>
+                                <a href="">首页</a>
+                                <a>/</a>
+                                <a href="">归档</a>
+                            </div>
+
+                            <div class="content-container">
+
+                               <div class="markdown-body">
+                                   <p>Vditor 是一款<strong>所见即所得</strong>编辑器，支持 <em>Markdown</em>。</p>
+                                   <ul>
+                                       <li>不熟悉 Markdown 可使用工具栏或快捷键进行排版</li>
+                                       <li>熟悉 Markdown 可直接排版，也可切换为分屏预览</li>
+                                   </ul>
+                                   <p>更多细节和用法请参考 <a href="https://ld246.com/article/1549638745630" target="_blank">Vditor - 浏览器端的 Markdown 编辑器</a>，同时也欢迎向我们提出建议或报告问题，谢谢 ❤️</p>
+                                   <h2><a id="_7"></a>教程</h2>
+                                   <p>这是一篇讲解如何正确使用 <strong>Markdown</strong> 的排版示例，学会这个很有必要，能让你的文章有更佳清晰的排版。</p>
+                                   <blockquote>
+                                       <p>引用文本：Markdown is a text formatting syntax inspired</p>
+                                   </blockquote>
+                                   <h2><a id="_13"></a>语法指导</h2>
+                                   <h3><a id="_15"></a>普通内容</h3>
+                                   <p>这段内容展示了在内容里面一些排版格式，比如：</p>
+                                   <ul>
+                                       <li><strong>加粗</strong> - <code>**加粗**</code></li>
+                                       <li><em>倾斜</em> - <code>*倾斜*</code></li>
+                                       <li><s>删除线</s> - <code>~~删除线~~</code></li>
+                                       <li><code>Code 标记</code> - <code>`Code 标记`</code></li>
+                                       <li><a href="https://ld246.com" target="_blank">超级链接</a> - <code>[超级链接](https://ld246.com)</code></li>
+                                       <li><a href="mailto:username@gmail.com" target="_blank">username@gmail.com</a> - <code>[username@gmail.com](mailto:username@gmail.com)</code></li>
+                                   </ul>
+                                   <h3><a id="_26"></a>提及用户</h3>
+                                   <p>@Vanessa 通过 <code>@User</code> 可以在内容中提及用户，被提及的用户将会收到系统通知。</p>
+                                   <blockquote>
+                                       <p>NOTE:</p>
+                                       <ol>
+                                           <li>@用户名之后需要有一个空格</li>
+                                           <li>新手没有艾特的功能权限</li>
+                                       </ol>
+                                   </blockquote>
+                                   <h3><a id="_Emoji_35"></a>表情符号 Emoji</h3>
+                                   <p>支持大部分标准的表情符号，可使用输入法直接输入，也可手动输入字符格式。通过输入 <code>:</code> 触发自动完成，可在个人设置中<a href="https://ld246.com/settings/function" target="_blank">设置常用表情</a>。</p>
+                                   <h4><a id="_39"></a>一些表情例子</h4>
+                                   <p>😄 😆 😵 😭 😰 😅  😢 😤 😍 😌<br />
+                                       👍 👎 💯 👏 🔔 🎁 ❓ 💣 ❤️ ☕️ 🌀 🙇 💋 🙏 💢</p>
+                                   <h3><a id="__Heading_3_44"></a>大标题 - Heading 3</h3>
+                                   <p>你可以选择使用 H1 至 H6，使用 ##(N) 打头。建议帖子或回帖中的顶级标题使用 Heading 3，不要使用 1 或 2，因为 1 是系统站点级，2 是帖子标题级。</p>
+                                   <blockquote>
+                                       <p>NOTE: 别忘了 # 后面需要有空格！</p>
+                                   </blockquote>
+                                   <h4><a id="Heading_4_50"></a>Heading 4</h4>
+                                   <h5><a id="Heading_5_52"></a>Heading 5</h5>
+                                   <h6><a id="Heading_6_54"></a>Heading 6</h6>
+                                   <h3><a id="_56"></a>图片</h3>
+                                   <pre><code class="lang-">![alt 文本](http://image-path.png)
+![alt 文本](http://image-path.png &quot;图片 Title 值&quot;)
+</code></pre>
+                                   <p>支持复制粘贴直接上传。</p>
+                                   <h3><a id="_65"></a>代码块</h3>
+                                   <h4><a id="_67"></a>普通</h4>
+                                   <pre><code class="lang-">*emphasize*    **strong**
+_emphasize_    __strong__
+var a = 1
+</code></pre>
+                                   <h4><a id="_75"></a>语法高亮支持</h4>
+                                   <p>如果在 ``` 后面跟随语言名称，可以有语法高亮的效果哦，比如:</p>
+                                   <h5><a id="_Go__79"></a>演示 Go 代码高亮</h5>
+                                   <pre><div class="hljs"><code class="lang-go"><span class="hljs-keyword">package</span> main
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+	fmt.Println(<span class="hljs-string">&quot;Hello, 世界&quot;</span>)
+}
+</code></div></pre>
+                                   <h5><a id="_Java__89"></a>演示 Java 高亮</h5>
+                                   <pre><div class="hljs"><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HelloWorld</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        System.out.println(<span class="hljs-string">&quot;Hello World!&quot;</span>);
+    }
+}
+</code></div></pre>
+                                   <blockquote>
+                                       <p>Tip: 语言名称支持下面这些: <code>ruby</code>, <code>python</code>, <code>js</code>, <code>html</code>, <code>erb</code>, <code>css</code>, <code>coffee</code>, <code>bash</code>, <code>json</code>, <code>yml</code>, <code>xml</code> …</p>
+                                   </blockquote>
+                                   <h3><a id="_101"></a>有序、无序、任务列表</h3>
+                                   <h4><a id="_103"></a>无序列表</h4>
+                                   <ul>
+                                       <li>Java
+                                           <ul>
+                                               <li>Spring
+                                                   <ul>
+                                                       <li>IoC</li>
+                                                       <li>AOP</li>
+                                                   </ul>
+                                               </li>
+                                           </ul>
+                                       </li>
+                                       <li>Go
+                                           <ul>
+                                               <li>gofmt</li>
+                                               <li>Wide</li>
+                                           </ul>
+                                       </li>
+                                       <li>Node.js
+                                           <ul>
+                                               <li>Koa</li>
+                                               <li>Express</li>
+                                           </ul>
+                                       </li>
+                                   </ul>
+                                   <h4><a id="_116"></a>有序列表</h4>
+                                   <ol>
+                                       <li>Node.js
+                                           <ol>
+                                               <li>Express</li>
+                                               <li>Koa</li>
+                                               <li>Sails</li>
+                                           </ol>
+                                       </li>
+                                       <li>Go
+                                           <ol>
+                                               <li>gofmt</li>
+                                               <li>Wide</li>
+                                           </ol>
+                                       </li>
+                                       <li>Java
+                                           <ol>
+                                               <li>Latke</li>
+                                               <li>IDEA</li>
+                                           </ol>
+                                       </li>
+                                   </ol>
+                                   <h4><a id="_129"></a>任务列表</h4>
+                                   <ul class="contains-task-list">
+                                       <li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 发布 Sym</li>
+                                       <li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 发布 Solo</li>
+                                       <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> 预约牙医</li>
+                                   </ul>
+                                   <h3><a id="_135"></a>表格</h3>
+                                   <p>如果需要展示数据什么的，可以选择使用表格。</p>
+                                   <table>
+                                       <thead>
+                                       <tr>
+                                           <th>header 1</th>
+                                           <th>header 2</th>
+                                       </tr>
+                                       </thead>
+                                       <tbody>
+                                       <tr>
+                                           <td>cell 1</td>
+                                           <td>cell 2</td>
+                                       </tr>
+                                       <tr>
+                                           <td>cell 3</td>
+                                           <td>cell 4</td>
+                                       </tr>
+                                       <tr>
+                                           <td>cell 5</td>
+                                           <td>cell 6</td>
+                                       </tr>
+                                       </tbody>
+                                   </table>
+                                   <h3><a id="_145"></a>隐藏细节</h3>
+                                   <details>
+                                       &lt;summary&gt;这里是摘要部分。&lt;/summary&gt;
+                                       这里是细节部分。
+                                   </details>
+                                   <h3><a id="_152"></a>段落</h3>
+                                   <p>空行可以将内容进行分段，便于阅读。（这是第一段）</p>
+                                   <p>使用空行在 Markdown 排版中相当重要。（这是第二段）</p>
+                                   <h3><a id="_158"></a>链接引用</h3>
+                                   <p><a href="https://b3log.org" target="_blank">链接文本</a></p>
+                                   <pre><code class="lang-">[链接文本][链接标识]
+
+[链接标识]: https://b3log.org
+</code></pre>
+                                   <h3><a id="_169"></a>数学公式</h3>
+                                   <p>多行公式块：</p>
+                                   <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mo fence="true">(</mo><msqrt><mrow><mi>ϕ</mi><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></msqrt><mo>−</mo><mi>ϕ</mi><mo fence="true">)</mo><msup><mi>e</mi><mrow><mfrac><mn>2</mn><mn>5</mn></mfrac><mi>π</mi></mrow></msup></mrow></mfrac><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mrow><msup><mi>e</mi><mrow><mo>−</mo><mn>2</mn><mi>π</mi></mrow></msup></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><msup><mi>e</mi><mrow><mo>−</mo><mn>4</mn><mi>π</mi></mrow></msup></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><msup><mi>e</mi><mrow><mo>−</mo><mn>6</mn><mi>π</mi></mrow></msup></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><msup><mi>e</mi><mrow><mo>−</mo><mn>8</mn><mi>π</mi></mrow></msup></mrow><mrow><mn>1</mn><mo>+</mo><mo>⋯</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{
+  \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+  \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+    1+\frac{e^{-6\pi}}
+    {1+\frac{e^{-8\pi}}{1+\cdots}}
+  }
+}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.491108em;"></span><span class="strut bottom" style="height:3.692383em;vertical-align:-2.201275em;"></span><span class="base"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.11em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"><span class="mopen"><span class="delimsizing size2">(</span></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist svg-align" style="height:1.04139em;"><span style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord mathit">ϕ</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist svg-align" style="height:0.90722em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathrm">5</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span style="height:1em;"><svg width='100%' height='1em'>
+            <svg viewBox='0 0 400000 1000' preserveAspectRatio='xMinYMin
+slice'><path d='M95 622c-2.667 0-7.167-2.667-13.5
+-8S72 604 72 600c0-2 .333-3.333 1-4 1.333-2.667 23.833-20.667 67.5-54s
+65.833-50.333 66.5-51c1.333-1.333 3-2 5-2 4.667 0 8.667 3.333 12 10l173
+378c.667 0 35.333-71 104-213s137.5-285 206.5-429S812 17.333 812 14c5.333
+-9.333 12-14 20-14h399166v40H845.272L620 507 385 993c-2.667 4.667-9 7-19
+7-6 0-10-1-12-3L160 575l-65 47zM834 0h399166v40H845z'/></svg></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.13278em;"></span></span></span></span></span></span><span style="top:-3.0013900000000002em;"><span class="pstrut" style="height:3.2em;"></span><span style="height:1.2em;"><svg width="100%" height="1.2em">
+            <svg viewBox='0 0 400000 1200' preserveAspectRatio='xMinYMin
+slice'><path d='M263 601c.667 0 18 39.667 52 119s68.167
+ 158.667 102.5 238 51.833 119.333 52.5 120C810 373.333 980.667 17.667 982 11
+c4.667-7.333 11-11 19-11h398999v40H1012.333L741 607c-38.667 80.667-84 175-136
+ 283s-89.167 185.333-111.5 232-33.833 70.333-34.5 71c-4.667 4.667-12.333 7-23
+ 7l-12-1-109-253c-72.667-168-109.333-252-110-252-10.667 8-22 16.667-34 26-22
+ 17.333-33.333 26-34 26l-26-26 76-59 76-60zM1001 0h398999v40H1012z'/></svg></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19860999999999995em;"></span></span></span></span><span class="mbin">−</span><span class="mord mathit">ϕ</span><span class="mclose"><span class="delimsizing size2">)</span></span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.93957em;"><span style="top:-3.3485500000000004em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443142857142858em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathrm mtight">5</span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span><span class="mord mathit mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.38em;"><span class="pstrut" style="height:3.15em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.827em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"><span class="mord mathrm">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.69002em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.19358em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.91642em;"><span style="top:-2.4519800000000003em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0543142857142858em;"><span style="top:-2.229757142857143em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathrm mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size1 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32544em;"><span style="top:-2.468em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight"><span class="mord mathrm mtight">1</span><span class="mbin mtight">+</span><span class="minner mtight">⋯</span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.387em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9384399999999999em;"><span style="top:-2.93844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathrm mtight">8</span><span class="mord mathit mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.61533em;"></span></span></span></span><span class="mclose nulldelimiter sizing reset-size1 size6"></span></span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9384399999999999em;"><span style="top:-2.93844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathrm mtight">6</span><span class="mord mathit mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2097642857142856em;"></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathrm mtight">4</span><span class="mord mathit mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3948549999999997em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathrm mtight">2</span><span class="mord mathit mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.201275em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+                                   <p>行内公式：</p>
+                                   <p>公式 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><mstyle mathcolor="red"><msup><mi>c</mi><mn>2</mn></msup></mstyle></mrow><annotation encoding="application/x-tex">a^2 + b^2 = \color{red}c^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span></span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span></span></span></span></span><span class="mrel">=</span><span class="mord" style="color:red;"><span class="mord mathit" style="color:red;">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight" style="color:red;"><span class="mord mathrm mtight" style="color:red;">2</span></span></span></span></span></span></span></span></span></span></span> 是行内。</p>
+                                   <h3><a id="_187"></a>脑图</h3>
+                                   <pre><code class="lang-mindmap">- 教程
+- 语法指导
+  - 普通内容
+  - 提及用户
+  - 表情符号 Emoji
+    - 一些表情例子
+  - 大标题 - Heading 3
+    - Heading 4
+      - Heading 5
+        - Heading 6
+  - 图片
+  - 代码块
+    - 普通
+    - 语法高亮支持
+      - 演示 Go 代码高亮
+      - 演示 Java 高亮
+  - 有序、无序、任务列表
+    - 无序列表
+    - 有序列表
+    - 任务列表
+  - 表格
+  - 隐藏细节
+  - 段落
+  - 链接引用
+  - 数学公式
+  - 脑图
+  - 流程图
+  - 时序图
+  - 甘特图
+  - 图表
+  - 五线谱
+  - Graphviz
+  - 多媒体
+  - 脚注
+- 快捷键
+</code></pre>
+                                   <h3><a id="_227"></a>流程图</h3>
+                                   <pre><code class="lang-mermaid">graph TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+</code></pre>
+                                   <h3><a id="_243"></a>时序图</h3>
+                                   <pre><code class="lang-mermaid">sequenceDiagram
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Every minute
+        John--&gt;&gt;Alice: Great!
+    end
+</code></pre>
+                                   <h3><a id="_253"></a>甘特图</h3>
+                                   <pre><code class="lang-mermaid">gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2019-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2019-01-12  , 12d
+    another task      : 24d
+</code></pre>
+                                   <h3><a id="_267"></a>图表</h3>
+                                   <pre><code class="lang-echarts">{
+  &quot;title&quot;: { &quot;text&quot;: &quot;最近 30 天&quot; },
+  &quot;tooltip&quot;: { &quot;trigger&quot;: &quot;axis&quot;, &quot;axisPointer&quot;: { &quot;lineStyle&quot;: { &quot;width&quot;: 0 } } },
+  &quot;legend&quot;: { &quot;data&quot;: [&quot;帖子&quot;, &quot;用户&quot;, &quot;回帖&quot;] },
+  &quot;xAxis&quot;: [{
+      &quot;type&quot;: &quot;category&quot;,
+      &quot;boundaryGap&quot;: false,
+      &quot;data&quot;: [&quot;2019-05-08&quot;,&quot;2019-05-09&quot;,&quot;2019-05-10&quot;,&quot;2019-05-11&quot;,&quot;2019-05-12&quot;,&quot;2019-05-13&quot;,&quot;2019-05-14&quot;,&quot;2019-05-15&quot;,&quot;2019-05-16&quot;,&quot;2019-05-17&quot;,&quot;2019-05-18&quot;,&quot;2019-05-19&quot;,&quot;2019-05-20&quot;,&quot;2019-05-21&quot;,&quot;2019-05-22&quot;,&quot;2019-05-23&quot;,&quot;2019-05-24&quot;,&quot;2019-05-25&quot;,&quot;2019-05-26&quot;,&quot;2019-05-27&quot;,&quot;2019-05-28&quot;,&quot;2019-05-29&quot;,&quot;2019-05-30&quot;,&quot;2019-05-31&quot;,&quot;2019-06-01&quot;,&quot;2019-06-02&quot;,&quot;2019-06-03&quot;,&quot;2019-06-04&quot;,&quot;2019-06-05&quot;,&quot;2019-06-06&quot;,&quot;2019-06-07&quot;],
+      &quot;axisTick&quot;: { &quot;show&quot;: false },
+      &quot;axisLine&quot;: { &quot;show&quot;: false }
+  }],
+  &quot;yAxis&quot;: [{ &quot;type&quot;: &quot;value&quot;, &quot;axisTick&quot;: { &quot;show&quot;: false }, &quot;axisLine&quot;: { &quot;show&quot;: false }, &quot;splitLine&quot;: { &quot;lineStyle&quot;: { &quot;color&quot;: &quot;rgba(0, 0, 0, .38)&quot;, &quot;type&quot;: &quot;dashed&quot; } } }],
+  &quot;series&quot;: [
+    {
+      &quot;name&quot;: &quot;帖子&quot;, &quot;type&quot;: &quot;line&quot;, &quot;smooth&quot;: true, &quot;itemStyle&quot;: { &quot;color&quot;: &quot;#d23f31&quot; }, &quot;areaStyle&quot;: { &quot;normal&quot;: {} }, &quot;z&quot;: 3,
+      &quot;data&quot;: [&quot;18&quot;,&quot;14&quot;,&quot;22&quot;,&quot;9&quot;,&quot;7&quot;,&quot;18&quot;,&quot;10&quot;,&quot;12&quot;,&quot;13&quot;,&quot;16&quot;,&quot;6&quot;,&quot;9&quot;,&quot;15&quot;,&quot;15&quot;,&quot;12&quot;,&quot;15&quot;,&quot;8&quot;,&quot;14&quot;,&quot;9&quot;,&quot;10&quot;,&quot;29&quot;,&quot;22&quot;,&quot;14&quot;,&quot;22&quot;,&quot;9&quot;,&quot;10&quot;,&quot;15&quot;,&quot;9&quot;,&quot;9&quot;,&quot;15&quot;,&quot;0&quot;]
+    },
+    {
+      &quot;name&quot;: &quot;用户&quot;, &quot;type&quot;: &quot;line&quot;, &quot;smooth&quot;: true, &quot;itemStyle&quot;: { &quot;color&quot;: &quot;#f1e05a&quot; }, &quot;areaStyle&quot;: { &quot;normal&quot;: {} }, &quot;z&quot;: 2,
+      &quot;data&quot;: [&quot;31&quot;,&quot;33&quot;,&quot;30&quot;,&quot;23&quot;,&quot;16&quot;,&quot;29&quot;,&quot;23&quot;,&quot;37&quot;,&quot;41&quot;,&quot;29&quot;,&quot;16&quot;,&quot;13&quot;,&quot;39&quot;,&quot;23&quot;,&quot;38&quot;,&quot;136&quot;,&quot;89&quot;,&quot;35&quot;,&quot;22&quot;,&quot;50&quot;,&quot;57&quot;,&quot;47&quot;,&quot;36&quot;,&quot;59&quot;,&quot;14&quot;,&quot;23&quot;,&quot;46&quot;,&quot;44&quot;,&quot;51&quot;,&quot;43&quot;,&quot;0&quot;]
+    },
+    {
+      &quot;name&quot;: &quot;回帖&quot;, &quot;type&quot;: &quot;line&quot;, &quot;smooth&quot;: true, &quot;itemStyle&quot;: { &quot;color&quot;: &quot;#4285f4&quot; }, &quot;areaStyle&quot;: { &quot;normal&quot;: {} }, &quot;z&quot;: 1,
+      &quot;data&quot;: [&quot;35&quot;,&quot;42&quot;,&quot;73&quot;,&quot;15&quot;,&quot;43&quot;,&quot;58&quot;,&quot;55&quot;,&quot;35&quot;,&quot;46&quot;,&quot;87&quot;,&quot;36&quot;,&quot;15&quot;,&quot;44&quot;,&quot;76&quot;,&quot;130&quot;,&quot;73&quot;,&quot;50&quot;,&quot;20&quot;,&quot;21&quot;,&quot;54&quot;,&quot;48&quot;,&quot;73&quot;,&quot;60&quot;,&quot;89&quot;,&quot;26&quot;,&quot;27&quot;,&quot;70&quot;,&quot;63&quot;,&quot;55&quot;,&quot;37&quot;,&quot;0&quot;]
+    }
+  ]
+}
+</code></pre>
+                                   <h3><a id="_299"></a>五线谱</h3>
+                                   <pre><code class="lang-abc">X: 24
+T: Clouds Thicken
+C: Paul Rosen
+S: Copyright 2005, Paul Rosen
+M: 6/8
+L: 1/8
+Q: 3/8=116
+R: Creepy Jig
+K: Em
+|:&quot;Em&quot;EEE E2G|&quot;C7&quot;_B2A G2F|&quot;Em&quot;EEE E2G|\
+&quot;C7&quot;_B2A &quot;B7&quot;=B3|&quot;Em&quot;EEE E2G|
+&quot;C7&quot;_B2A G2F|&quot;Em&quot;GFE &quot;D (Bm7)&quot;F2D|\
+1&quot;Em&quot;E3-E3:|2&quot;Em&quot;E3-E2B|:&quot;Em&quot;e2e gfe|
+&quot;G&quot;g2ab3|&quot;Em&quot;gfeg2e|&quot;D&quot;fedB2A|&quot;Em&quot;e2e gfe|\
+&quot;G&quot;g2ab3|&quot;Em&quot;gfe&quot;D&quot;f2d|&quot;Em&quot;e3-e3:|
+</code></pre>
+                                   <h3><a id="Graphviz_319"></a>Graphviz</h3>
+                                   <pre><code class="lang-graphviz">digraph finite_state_machine {
+    rankdir=LR;
+    size=&quot;8,5&quot;
+    node [shape = doublecircle]; S;
+    node [shape = point ]; qi
+
+    node [shape = circle];
+    qi -&gt; S;
+    S  -&gt; q1 [ label = &quot;a&quot; ];
+    S  -&gt; S  [ label = &quot;a&quot; ];
+    q1 -&gt; S  [ label = &quot;a&quot; ];
+    q1 -&gt; q2 [ label = &quot;ddb&quot; ];
+    q2 -&gt; q1 [ label = &quot;b&quot; ];
+    q2 -&gt; q2 [ label = &quot;b&quot; ];
+}
+</code></pre>
+                                   <h3><a id="Flowchart_339"></a>Flowchart</h3>
+                                   <pre><code class="lang-flowchart">st=&gt;start: Start
+op=&gt;operation: Your Operation
+cond=&gt;condition: Yes or No?
+e=&gt;end
+
+st-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;op
+</code></pre>
+                                   <h3><a id="_352"></a>多媒体</h3>
+                                   <p>支持 v.qq.com，youtube.com，youku.com，coub.com，facebook.com/video，dailymotion.com，.mp4，.m4v，.ogg，.ogv，.webm，.mp3，.wav 链接解析</p>
+                                   <p>https://v.qq.com/x/cover/zf2z0xpqcculhcz/y0016tj0qvh.html</p>
+                                   <h3><a id="_358"></a>脚注</h3>
+                                   <p>这里是一个脚注引用<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，这里是另一个脚注引用<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。</p>
+                                   <pre><code class="lang-">这里是一个脚注引用[^1]，这里是另一个脚注引用[^bignote]。
+[^1]: 第一个脚注定义。
+[^bignote]: 脚注定义可使用多段内容。
+
+    缩进对齐的段落包含在这个脚注定义内。
+
+    ```
+    可以使用代码块。
+    ```
+
+    还有其他行级排版语法，比如**加粗**和[链接](https://b3log.org)。
+</code></pre>
+                                   <h2><a id="_387"></a>快捷键</h2>
+                                   <p>我们的编辑器支持很多快捷键，具体请参考 <a href="https://ld246.com/article/1474030007391" target="_blank">键盘快捷键</a>（或者按 &quot;<code>?</code> &quot;😼）</p>
+                                   <hr class="footnotes-sep" />
+                                   <section class="footnotes">
+                                       <ol class="footnotes-list">
+                                           <li id="fn1" class="footnote-item"><p>第一个脚注定义。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+                                           </li>
+                                           <li id="fn2" class="footnote-item"><p>脚注定义可使用多段内容。</p>
+                                               <p>缩进对齐的段落包含在这个脚注定义内。</p>
+                                               <pre><code class="lang-">可以使用代码块。
+</code></pre>
+                                               <p>还有其他行级排版语法，比如<strong>加粗</strong>和<a href="https://b3log.org" target="_blank">链接</a>。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+                                           </li>
+                                       </ol>
+                                   </section>
+
+
+
+                               </div>
+                                <div class="detail-line"><span>文章到此结束</span></div>
+                                <div class="end-group">
+                                    <div class="end-editor">
+                                        <i data-feather="clock" width="12"></i><span>最后修改：2023 年 02 月 03 日</span>
+                                    </div>
+                                    <div class="allow-zhuanzai hint--left" data-hint="转载请保留本文转载地址，著作权归作者所有">
+                                        © 允许规范转载
+                                    </div>
+                                </div>
+                                <div class="tt-license">
+                                    <p>本文链接：https://blog.icolak.com/program/551.html</p>
+                                    <p>除非注明，均默认采用<a rel="license nofollow" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>许可协议</p>
+                                    <p>版权声明：转载请注明文章来源</p>
+                                </div>
+
+                                <div class="reward-group">
+                                    <span class="btn reward-show-btn">
+                                        <i data-feather="gift" width="12"></i>
+                                        <span>打赏</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="detail-page">
+                                <a href="" class="left-btn hint--top" data-hint="我们的编辑器支持很多快捷键，具体请参考 键盘快捷键（或者按 ">上一篇</a>
+                                <a href="" class="left-btn hint--top" data-hint="我们的编辑器支持很多快捷键，">下一篇</a>
+                            </div>
+                            <div class="message-container">
+                                <div class="text1">
+                                    <span>发表留言</span>
+                                    <span class="info hint--top"  data-hint="登录后方可发表信息哦~请勿发表违规内容、无意义内容。">
+                                        <i data-feather="info" width="18"></i>
+                                    </span>
+                                </div>
+                                <div class="message-box">
+                                    <textarea name="message" class="comment-textarea" id="messageBox" placeholder="说点什么吧~" ></textarea>
+                                    <div class="button-group comment-button-group">
+                                        <div class="other">
+                                            <span class="hint--bottom" data-hint="表情">
+                                                <i data-feather="smile" width="20"></i>
+                                            </span>
+                                        </div>
+                                        <div class="submit">
+                                            <span>登录后提交</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-list">
+                                        <div class="text1">51条评论</div>
+
+                                        <div class="message-item">
+                                            <div class="avatar">
+                                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/29/vel1K61680057332873.jpg" alt="">
+                                            </div>
+                                            <div class="message-content">
+                                                <div class="name">多点部落MoreCoding</div>
+                                                <div class="date">January 24th, 2023 at 08:54 pm</div>
+                                                <div class="content">
+                                                    <p>博客名称：薯条吖</p>
+                                                    <p>博客地址：https://www.shutiaoya.com</p>
+                                                    <p>博客Logo：https://www.shutiaoya.com/logo</p>
+                                                    <div class="replay">
+                                                        <span class="btn replay-comment-btn">回复</span>
+                                                    </div>
+                                                    <div class="replay-wrapper" hidden="hidden">
+                                                        <textarea name="message" class="replay-textarea"  placeholder="说点什么吧~" ></textarea>
+                                                        <div class="button-group replay-button-group">
+                                                            <div class="other">
+                                            <span class="hint--bottom" data-hint="表情">
+                                                <i data-feather="smile" width="20"></i>
+                                            </span>
+                                                            </div>
+                                                            <div class="submit">
+                                                                <span>登录后提交</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message-item">
+                                            <div class="avatar">
+                                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/29/vel1K61680057332873.jpg" alt="">
+                                            </div>
+                                            <div class="message-content">
+                                                <div class="name">多点部落MoreCoding</div>
+                                                <div class="date">January 24th, 2023 at 08:54 pm</div>
+                                                <div class="content">
+                                                    <p>博客名称：薯条吖</p>
+                                                    <p>博客地址：https://www.shutiaoya.com</p>
+                                                    <p>博客Logo：https://www.shutiaoya.com/logo</p>
+                                                    <div class="replay" hidden="hidden">
+                                                        <input type="text" class="replay-input">
+                                                        <span class="btn">回复</span>
+                                                    </div>
+
+                                                    <div class="message-item">
+                                                        <div class="avatar">
+                                                            <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/29/vel1K61680057332873.jpg" alt="">
+                                                        </div>
+                                                        <div class="message-content">
+                                                            <div class="name">多点部落MoreCoding</div>
+                                                            <div class="date">January 24th, 2023 at 08:54 pm</div>
+                                                            <div class="content">
+                                                                <p>博客名称：薯条吖</p>
+                                                                <p>博客地址：https://www.shutiaoya.com</p>
+                                                                <p>博客Logo：https://www.shutiaoya.com/logo</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-aside">
+                <div class="right-tabs-container">
+                    <div class="tab-header">
+                        <div class="item">
+                            <i data-feather="thumbs-up" width="16"></i>
+                        </div>
+                        <div class="item">
+                            <i data-feather="message-square" width="16"></i>
+                        </div>
+                        <div class="item">
+                            <i data-feather="gift" width="16"></i>
+                        </div>
+                    </div>
+                    <div class="bottom-line"><span class="line"></span></div>
+                    <div class="tab-content-list">
+                        <div class="tab-content-item">
+                            <div class="tab-title">热门文章</div>
+                            <div class="item-list">
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line1"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num">
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-content-item" hidden="hidden">
+                            <div class="tab-title">最新评论</div>
+                            <div class="item-list">
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line1"> 左耳 </div>
+                                        <div class=" title desc line2"> 感谢博主分享，博主辛苦了 </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-content-item" hidden="hidden">
+                            <div class="tab-title">随机文章</div>
+                            <div class="item-list">
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line1"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num">
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                            <span class="num-items">
+                                                <i data-feather="eye" width="12px"></i><span class="num">345</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <span class="avatar">
+                                        <img src="../dist/images/9.jpeg" alt="">
+                                    </span>
+                                    <div class="item-info">
+                                        <div class="title line2"> 左耳《爱情转移》右耳《富士山下》耳机听有惊喜左耳《爱情转移》右耳《富士山 </div>
+                                        <span class="click-num"><i data-feather="eye" width="12px"></i><span class="num">345</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-site-info-container">
+                    <div class="site-info-title">站点信息</div>
+                    <div class="info-box">
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="award"></i>
+                                <span>文章数目</span>
+                            </div>
+                            <span class="num-text">109</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="message-circle"></i>
+                                <span>评论数目</span>
+                            </div>
+                            <span class="num-text">109</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="calendar"></i>
+                                <span>运行天数</span>
+                            </div>
+                            <span class="num-text">5年23天</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="activity"></i>
+                                <span>最后活动</span>
+                            </div>
+                            <span class="num-text">5天前</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="title">
+                                <i data-feather="user"></i>
+                                <span>访客总数</span>
+                            </div>
+                            <span class="num-text">4452277</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-tags-container">
+                    <div class="site-tag-title">标签云</div>
+                    <div class="tag-list">
+                        <a href="">python</a>
+                        <a href="">django</a>
+                        <a href="">javascript</a>
+                        <a href="">node</a>
+                        <a href="">vue</a>
+                        <a href="">网络安全</a>
+                        <a href="">操作系统</a>
+                        <a href="">macos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-footer">
+            <div class="left">
+                <span>© 2023 All rights reserved.</span>
+                <a href="https://beian.miit.gov.cn/#/Integrated/index">CopyRight©皖ICP备18020895号-1</a>
+            </div>
+            <div class="right">
+                <span>PowerBy Django+Django REST framework</span><span>|</span>
+                <span>AuthorBy 多点部落</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="auth-container" style="display: none">
+    <div class="auth-box">
+        <div class="image-box">
+            <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/login-image1679879542997.svg" alt="">
+        </div>
+        <div class="login-wrapper-box">
+            <div class="box-title"><img src="https://ossimg.wouldmissyou.com/site/static/image1.png" alt=""></div>
+            <form>
+                <div class="login-box">
+                    <div class="box-name">手机号码:</div>
+                    <div class="box-input"><input type="text" name="mobile" placeholder="请输入手机号码"></div>
+                    <div class="box-name">验证码:</div>
+                    <div class="box-input captcha-box">
+                        <input type="text" name="code" placeholder="请输入验证码">
+                        <span class="" id="getCaptchaBtn">获取验证码</span>
+                    </div>
+                    <div class="box-input">
+                        <button type="button" id="loginBtn" class="submit-login">注册并登录</button>
+                    </div>
+                    <div class="no-author">
+                        <div class="title">其他登录方式</div>
+                        <div class="other-login-type">
+                            <a href="">
+                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/gitee1679882630843.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/github-mark1679882649472.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/QQ1679882692656.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="https://ossimg.wouldmissyou.com/uPic/2023/03/27/微博1679882740673.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="reward-container" style="display: none">
+    <div class="reward-main">
+        <div class="reward-header">
+            <span class="active">支付宝</span>
+            <span>微信</span>
+        </div>
+        <div class="img-box">
+            <div class="pay-box">
+                <img src="https://ossimg.wouldmissyou.com/site/static/alipay.png" alt="">
+            </div>
+            <div class="pay-box" hidden="hidden">
+                <img src="https://ossimg.wouldmissyou.com/site/static/wechat.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    feather.replace({"width": "14px"})
+</script>
+<script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "auto",
+        unit: "c",
+        theme: "dark",
+        token: "3cddaf80-91e9-4203-9ae9-c7104826e370",
+        hover: "enabled",
+        container: "tp-weather-widget"
+    })
+</script>
+<script src="../dist/js/jquery.min.js"></script>
+<script src="../dist/js/message.min.js"></script>
+<script src="../dist/js/requests.min.js"></script>
+<script src="../dist/js/main.min.js"></script>
+
+</body>
+</html>

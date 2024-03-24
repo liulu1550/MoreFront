@@ -1,0 +1,90 @@
+$main-width:1450px;
+$header-height:50px;
+$body-background:#f0f3f4;
+$bg-white:#f9f9f9;
+$box-shadow:0 1px 4px 1px rgba(0,0,0,.05);
+$left-aside-width:260px;
+$right-aside-width:280px;
+$footer-bg:#fff;
+$hover-bg:rgba(0,0,0,.05);
+//$active-color:
+$main-font-color:#777;
+$desc-font-color:#a0a0a0;
+
+//颜色
+$color1:#23b7e5;
+$color2:#3a3f51;
+$color3:#27c24c;
+$color4:#1c2b36;
+$color5:#fad733;
+$color6:#7266ba;
+$color7:#f05050;
+$color8: #38d5d1;
+
+$bgcolorlist: $color1 $color2 $color3 $color4 $color5 $color6 $color7 $color8;
+
+.caret{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.line1{
+  /* 文本不换行 */
+  white-space: nowrap;
+  /* 超出范围隐藏 */
+  overflow: hidden;
+  /* 文字超出用省略号 */
+  text-overflow: ellipsis;
+}
+
+.line2{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical !important;
+  overflow : hidden;
+  text-overflow: ellipsis;
+
+}
+@font-face {
+  font-family: 'Source Han Sans';
+  font-display: swap;
+  src: url('../fonts/webfont.eot'); /* IE9 */
+  src: url('../fonts/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/webfont.woff2') format('woff2'),
+  url('../fonts/webfont.woff') format('woff'), /* chrome、firefox */
+  url('../fonts/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../fonts/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  color: $main-font-color;
+  font-family: "Source Han Sans";
+  //font-weight: 200;
+}
+body{
+  background: $body-background;
+}
+
+body::-webkit-resizer {
+  background-color: #cbcbcb;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+body::-webkit-scrollbar-corner {
+  background-color: #cbcbcb;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #cbcbcb;
+}
